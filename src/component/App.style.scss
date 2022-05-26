@@ -1,2 +1,33 @@
 .App {
+    --contWidth: 700px;
+    --contHeight: 500px;
+    --ballX: 350px;
+    --ballY: 250px;
+
+    width: var(--contWidth);
+    height: var(--contHeight);
+    border: 4px solid #222;
+    background: url('../../public/background.jpg') no-repeat center / 180%;
+    padding: 20px;
+    position: relative;
+
+    &-Stats {
+        display: flex;
+        justify-content: space-between;
+
+        font-size: 28px;
+    }
+
+    &-Ball {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: url('../../public/logo.png') no-repeat center / cover;
+        box-shadow: 2px 3px 13px rgba(34, 34, 34, 0.5);
+        cursor: pointer;
+        position: absolute;
+        left: var(--ballX);
+        top: var(--ballY);
+        transform: translate(-50%);
+    }
 }

@@ -1,5 +1,5 @@
 // Import Modules
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { PureComponent } from 'react';
 
 // Import Styles
@@ -11,9 +11,13 @@ import App from './component/App.container';
 class AppRouter extends PureComponent {
   render() {
       return (
-        <App/>
+        <>
+          <p>Click ball to start juggle</p>
+          <App/>
+        </>
       )
   }
 }
 
-render(<AppRouter />, document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
+root.render(<AppRouter/>);
